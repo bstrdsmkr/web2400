@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://bstrdsmkr.github.io/web2400/sitemap.xml 
+Sitemap: http://bstrdsmkr.github.io/web2400//sitemap.xml 
