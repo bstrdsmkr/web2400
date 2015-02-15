@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[My Octopress Blog]]></title>
+  <title><![CDATA[Project Management]]></title>
   <link href="http://bstrdsmkr.github.io/web2400/atom.xml" rel="self"/>
   <link href="http://bstrdsmkr.github.io/web2400/"/>
-  <updated>2015-02-06T18:11:35-05:00</updated>
+  <updated>2015-02-14T19:51:42-05:00</updated>
   <id>http://bstrdsmkr.github.io/web2400/</id>
   <author>
-    <name><![CDATA[Your Name]]></name>
+    <name><![CDATA[Zach Guzman]]></name>
     
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
