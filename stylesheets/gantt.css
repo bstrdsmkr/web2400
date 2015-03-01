@@ -268,7 +268,7 @@
 .fn-gantt .navigate .nav-slider-button {
     width: 17px;
     height: 60px;
-    background: url(http://web-students.pstcc.edu/web2400r50/web2400r5007/images/slider_handle.png) center center no-repeat;
+    background: url(http://bstrdsmkr.github.io/web2400/images/slider_handle.png) center center no-repeat;
     left: 0px;
     top: 0px;
     margin: -26px 0 0 0;
@@ -299,7 +299,7 @@
     width: 20px;
     height: 20px;
     font-size: 0px;
-    background: #595959 url(http://web-students.pstcc.edu/web2400r50/web2400r5007/images/icon_sprite.png) !important;
+    background: #595959 url(http://bstrdsmkr.github.io/web2400/images/icon_sprite.png) !important;
     border: 1px solid #454546;
     cursor: pointer;
     vertical-align: top;
