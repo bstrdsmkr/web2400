@@ -1,0 +1,151 @@
+[{
+  "name": "Preproduction", "desc": "",
+    "values": [{
+      "from": "/Date(1422334799000)/",
+      "to": "/Date(1427169599000)/",
+      "label": "Preproduction",
+      "customClass": "ganttRed"
+    }]
+},{
+    "name": " ", "desc": "Clarification",
+    "values": [{
+      "from": "/Date(1422334799000)/",
+      "to": "/Date(1423501199000)/",
+      "label": "Clarification",
+      "customClass": "ganttGreen"
+    }]
+},{
+  "name": " ", "desc": "Solution Definition",
+  "values": [{
+    "from": "/Date(1423501199000)/",
+    "to": "/Date(1425315599000)/",
+    "label": "Solution Definition",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": " ", "desc": "Project Specification",
+  "values": [{
+    "from": "/Date(1425315599000)/",
+    "to": "/Date(1427126399000)/",
+    "label": "Project Specification",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": "Production", "desc": "",
+  "values": [{
+    "from": "/Date(1427126399000)/",
+    "to": "/Date(1430193599000)/",
+    "label": "Production",
+    "customClass": "ganttYellow"
+  }]
+},{
+  "name": " ", "desc": "Content creation",
+  "values": [{
+    "from": "/Date(1427126399000)/",
+    "to": "/Date(1427731199000)/",
+    "label": "Content creation",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": " ", "desc": "Design and construction",
+  "values": [{
+    "from": "/Date(1427731199000)/",
+    "to": "/Date(1428335999000)/",
+    "label": "Design and construction",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": " ", "desc": "Testing and handover",
+  "values": [{
+    "from": "/Date(1428335999000)/",
+    "to": "/Date(1428940799000)/",
+    "label": "Testing and handover",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": "Maintenance", "desc": "",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Maintenance",
+    "customClass": "ganttOrange"
+  }]
+},{
+  "name": " ", "desc": "Bug fixes",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Bug fixes",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": "Evaluation", "desc": "",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Evaluation",
+    "customClass": "ganttBlue"
+  }]
+},{
+  "name": " ", "desc": "Warranty Period",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Warranty Period",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": " ", "desc": "Final repairs",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Final repairs",
+    "customClass": "ganttGreen"
+  }]
+},{
+  "name": "Resources", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": " ", "desc": "Zach Guzman",
+  "values": [{
+    "from": "/Date(1422334799000)/",
+    "to": "/Date(1423501199000)/",
+    "label": "30hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1423501199000)/",
+    "to": "/Date(1425315599000)/",
+    "label": "40hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1425315599000)/",
+    "to": "/Date(1427126399000)/",
+    "label": "40hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1427126399000)/",
+    "to": "/Date(1427731199000)/",
+    "label": "20hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1427731199000)/",
+    "to": "/Date(1428335999000)/",
+    "label": "20hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1428335999000)/",
+    "to": "/Date(1428940799000)/",
+    "label": "20hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "30hrs",
+    "customClass": "ganttRed"
+  }]
+}]
