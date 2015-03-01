@@ -12,7 +12,7 @@
 }
 
 .gantt:after {
-    content: ".";
+    content: &#8220;.&#8221;;
     visibility: hidden;
     display: block;
     height: 0;
@@ -268,7 +268,7 @@
 .fn-gantt .navigate .nav-slider-button {
     width: 17px;
     height: 60px;
-    background: url(../images/slider_handle.png) center center no-repeat;
+    background: url(http://web-students.pstcc.edu/web2400r50/web2400r5007/images/slider_handle.png) center center no-repeat;
     left: 0px;
     top: 0px;
     margin: -26px 0 0 0;
@@ -299,7 +299,7 @@
     width: 20px;
     height: 20px;
     font-size: 0px;
-    background: #595959 url(../images/icon_sprite.png) !important;
+    background: #595959 url(http://web-students.pstcc.edu/web2400r50/web2400r5007/images/icon_sprite.png) !important;
     border: 1px solid #454546;
     cursor: pointer;
     vertical-align: top;
@@ -380,7 +380,7 @@
     height: 100%;
     left: 0;
     top: 0;
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#bf000000', endColorstr='#bf000000',GradientType=0 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr=&#8217;#bf000000&#8217;, endColorstr=&#8217;#bf000000&#8217;,GradientType=0 );
     background: rgba(0,0,0,0.75);
     cursor: wait;
     z-index: 30;

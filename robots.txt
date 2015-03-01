@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://bstrdsmkr.github.io/web2400//sitemap.xml 
+Sitemap: http://web-students.pstcc.edu/web2400r50/web2400r5007//sitemap.xml 
