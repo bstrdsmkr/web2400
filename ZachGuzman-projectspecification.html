@@ -1,0 +1,1241 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/material-wfont.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/ripples.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/gantt.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/custom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/toc.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/gh-commit.css">
+    <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Montserrat|Poiret+One">
+    <script language="javascript" type="text/javascript">
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
+    </script>
+    <style>
+      /* Bootstrap 3.x re-reset */
+
+      .fn-gantt *,
+      .fn-gantt *:after,
+      .fn-gantt *:before {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="jumbotron col-xs-10 col-xs-offset-1">
+      <div id="left-side" class="col-sm-7">
+        <h1>Project Proposal</h1>
+        <h5 class="yellow">Business Strategy</h5>
+        <h5>
+          The SOAPIFF site is in need of a both a technology upgrade and maintenance repair. In addition to the repairs and upgrades identified in the initial analysis, the organization, and more importantly it&#8217;s customers, will benefit greatly from a sustained
+          community engagement effort. This community engagement will be hallmarked by refocusing the site on attracting and maintaining an active community of both producers and consumers of content. While the core functionality of the site will be overhauled,
+          SOAPIFF has built a unique visual brand through it’s consistent theming and it is important that we preserve that overall feel in order to maintain community momentum and brand recognition after the repair and upgrade.
+        </h5>
+      </div>
+      <span class="vertical-divider hidden-xs"></span>
+      <div class="col-sm-offset-8">
+        <div><i class="icon header-info mdi-action-account-balance"></i> SOAPIFF</div>
+        <div><i class="icon header-info mdi-communication-contacts"></i> Michael Tomlinson - Client contact</div>
+        <div><i class="icon header-info mdi-content-mail"></i> Zach Guzman - Project Manager</div>
+        <div><i class="icon header-info mdi-social-public"></i> www.linkedin.com/in/zachguzman</div>
+      </div>
+    </div>
+    <div id="content" class="col-xs-10 col-xs-offset-1">
+      <div>
+        <section class="row" id="toc">
+          <h2>Table of Contents</h2>
+        </section>
+        <section class="row">
+          <h2>Version Control</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Version history</h3>
+                <p>
+                  This is a living document intended to serve as a reference and guideline for those involved in the production phase of the project. Changes and revisions will be made as the full scope of the project becomes clearer and as the details of the project begin
+                  to take form over the course of the production phase. The Version Control section will be automatically updated with every change made to this document and commited to the project&#8217;s git repository. Each change is accompanied by an author,
+                  timestamp, and cryptographic hash of the change commit id along with any comments included with the commit. The link included in the comments section will lead to a generated diff of all the changes between that commit and the previous.
+                  All signoffs and approvals shall reference the hash id of the corresponding version of the document to avoid any ambiguity.
+                </p>
+                <div id="version-history"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Distribution</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Notification List</h3>
+                <p class="list-group-item-text">
+                  <table class="table">
+                    <tr>
+                      <th>User</th>
+                      <th>Role</th>
+                    </tr>
+                    <tr>
+                      <td>Zach Guzman</td>
+                      <td>Project Manager</td>
+                    </tr>
+                    <tr>
+                      <td>Michael Tomlinson</td>
+                      <td>SOAPIFF Representative</td>
+                    </tr>
+                  </table>
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Project Objectives</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Objective Statement</h3>
+                <p class="list-group-item-text">
+                  This project shall include 3 pages redesigned from the source page to be used as a foundation and example for the future work of upgrading the entire site.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Scope</h3>
+                <p>
+                  The project scope shall be expressly limited to the items listed below:
+                </p>
+                <ul>
+                  <li>Design and prototyping of 3 deliverable pages sourced from the original site</li>
+                  <li>Development of related design composites</li>
+                  <li>Fundamental project management and scheduling</li>
+                  <li>Technical consultation</li>
+                  <li>Site marketing strategy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Success Criteria</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Requirements</h3>
+                <ul>
+                  <li>Site shall be free from typograpical errors</li>
+                  <li>Site shall be standards compliant</li>
+                  <li>Site shall be free from broken links</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Intangible Goals</h3>
+                <ul>
+                  <li>Site shall encourage both users and artists to form a community around the site</li>
+                  <li>Site shall present a clean aesthetic while maintaining the brand identity already built by SOAPIFF</li>
+                  <li>Site shall scale appropriately for mobile viewing</li>
+                  <li>Site shall present relevant information in an easily accessible and straight-forward manner</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Confirmation fo Success</h3>
+                <p>
+                  A set of automated tests shall be developed to provide confirmation of requirements. Any goals which cannot be verified automatically shall be verified manually and an affidavit or completion shall be included with the testing confirmation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Site Map</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Description</h3>
+                <p class="list-group-item-text">
+                  The Sitemap is a graphical representation of the site which displays each page as a node in the graph. The image below serves as such an overview for the intended site structure.
+                </p>
+                <img class="img-responsive" src="images/SOAPIFFsitemap.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Functional Specification</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Navigation</h3>
+                <p class="list-group-item-text">
+                  The navigation for the site will consist of a standard top anchored header which presents the SOAPIFF branding along with a link to each of the top level nodes of the site map. The SOAPIFF branding shall serve as the link back to the &#8220;Home&#8221; page which
+                  describes the purpose of the site and what the site offers.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">User Expierence</h3>
+                <p class="list-group-item-text">
+                  The site will employ responsive design to allow users to easily navigate and explore the site whether from mobile phones, tablets, desktops, or wide screen devices. On smaller screens, unnecessary items will be hidden, images will be scaled to an appropriate
+                  size, and text and other design elements will reflow to a more comfortable layout. On smaller devices, the navigation bar will collapse show only the SOAPIFF branding and a menu button which will contain the other navigation options.
+                  A mockup is provided in the next section for reference.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Mockup</h3>
+                <img class="img-responsive" src="assets/soapiff-wireframe.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Technical Specification</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Overview</h3>
+                <p class="list-group-item-text">
+                  The site architecture has no abnormal requirements therefore SOAPIFF&#8217;s current hosting provider shall remain sufficient as will be most any modern provider. To ensure this compatibility, a set of basic guidelines is provided below.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Server Hardware</h3>
+                <ul>
+                  <li>2 CPUs - Xenon class or better</li>
+                  <li>256mb RAM</li>
+                  <li>1Gbps bandwidth</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Server Software</h3>
+                <ul>
+                  <li>Apache 2.4.12 or</li>
+                  <li>NGINX 1.7.11</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Client Hardware</h3>
+                <ul>
+                  <li>2.0 Mhz single core CPU</li>
+                  <li>1Gb RAM</li>
+                  <li>1 Mbps bandwidth</li>
+                </ul>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Client Software</h3>
+                <ul>
+                  <li>Google Chrome 40.x</li>
+                  <li>Mozilla Firefox 33.x</li>
+                  <li>Apple Safari 5.x</li>
+                  <li>Microsoft Internet Explorer 11</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Content Plan</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Content Delivery</h3>
+                <p class="list-group-item-text">
+                  &#8220;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                  dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                  mollit anim id est laborum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Marketing Initiatives</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Primary Objective</h3>
+                <p class="list-group-item-text">
+                  The primary mode of advertisement for SOAPIFF will be through word-of-mouth and community building. While the site will be redesigned and structured to focus on this goal, its achievement will still require some additional effort on the part of the SOAPIFF
+                  staff in the form of community outreach and closer interaction with the artists in the community.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Optional Recommendations</h3>
+                <p class="list-group-item-text">
+                  While not necessary for the success of the project, the SOAPIFF staff may jumpstart the community building process by investing in advertising in both print and digital media to raise public awareness of the SOAPIFF mission in coordination with the launch
+                  of the new site.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Testing Plan</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Manual Testing</h3>
+                <p class="list-group-item-text">
+                  In addition to the ongoing testing done through development and quality assurance, the Project Manager shall perform usability and specification compliance testing before submission of the project and deliver and affidavit of completion. This testing
+                  shall include checking for propper rendering in all supported browsers, as well as the 5 most popular screen sizes and resolution at the time of delivery.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Automated Testing</h3>
+                <p class="list-group-item-text">
+                  In addition to the manual testing described in the previous section, a set of automated tests shall be developed in order to ensure efficiency in development of the site. These tests shall be ran against the site under development after each code check
+                  in and further development will be suspended until all tests are passed. While these tests may be delivered to SOAPIFF if desired, the expertise and training necessary to employ and maintain these tests is not covered within the scope
+                  of this project.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="row">
+          <h2>Updates and Maintenance</h2>
+          <div class="list-group">
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h3 class="list-group-item-heading">Strategy</h3>
+                <p class="list-group-item-text">
+                  While future updates and maintenance do not fall under the scope of this project, guidance are provided as criteria for the selection of personel and allocation of resources necessary to maintain the site.
+                </p>
+              </div>
+            </div>
+            <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h4 class="list-group-item-heading">Ongoing maintenance</h4>
+              <p class="list-group-item-text">
+                <ul>
+                  <li>Carrie Dyer will be retained as the site&#8217;s webmaster to provide on going content updates.</li>
+                  <li>Updates may be performed using any basic editor the webmaster desires. While free and open source
+                  web IDEs are avaiable and perfectly adaquate, professional web editing packages may cost ~$500 to license.</li>
+                  <li>Carrie will attend training focusing on community engagement in order to build social momentum and
+                  site awareness.</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+            <div class="list-group-item">
+              <div class="row-action-primary">
+                <i class="icon mdi-content-send"></i>
+              </div>
+              <div class="row-content">
+                <h4 class="list-group-item-heading">Skills Required</h4>
+                <p class="list-group-item-text">
+                  We have identified the following skill levels necessary to maintain the site going forward. SOAPIFF will recruit or train a resource as necessary, using these skill inidcations as a guideline.
+                </p>
+                <div class="col-sm-6">HTML
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+                <div class="col-sm-6">jQuery
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+                <div class="col-sm-6">Bootstrap
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+                <div class="col-sm-6">Responsive Design
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+                <div class="col-sm-6">Community Engagement
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-on"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+                <div class="col-sm-6">Graphic Design
+                  <span class="pull-right">
+                    <i class="icon mdi-image-lens"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                    <i class="icon mdi-toggle-radio-button-off"></i>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </section>
+      <section class="row">
+        <h2>Critical Path</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Description</h3>
+              <p class="list-group-item-text">
+                The Critical Path represents the tasks upon which the rest of the project depends. While
+                many of the tasks in the project can be completed in parallel in order to absorb any
+                delays in the other tasks, any delays in the tasks in the Critical Path will delay the
+                completion of the entire project.
+              </p>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Milestones</h3>
+              <p class="list-group-item-text">
+                The project has been broken up into several phases, the completion of which represents
+                a critical milestone in the progress of the project. Those milestones are listed below
+                as well as reflected in the schedule.
+                <ul>
+                  <li>Clarification</li>
+                  <li>Solution Definition</li>
+                  <li>Specification</li>
+                  <li>Content</li>
+                  <li>Design & Construction</li>
+                  <li>Test, Launch & Transfer</li>
+                  <li>Evaluation & Review</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Schedule</h3>
+              <div class="gantt"></div>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Critical Items</h3>
+              <p class="list-group-item-text">
+                <ul>
+                  <li>3.1 Project Specification</li>
+                  <li>4.1 Content Delivery</li>
+                  <li>4.2 Asset Preparation</li>
+                  <li>4.3 Test Development</li>
+                  <li>5.1 Wireframing</li>
+                  <li>5.3 Style Guide Development</li>
+                  <li>5.5 Development</li>
+                </ul>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Budget</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Billing</h3>
+              <p class="list-group-item-text">
+                <table class="table">
+                  <tr>
+                    <th>Tasks</th>
+                    <th>Rate</th>
+                    <th>Wk 1</th>
+                    <th>Wk 2</th>
+                    <th>Wk 3</th>
+                    <th>Wk 4</th>
+                    <th>Wk 5</th>
+                    <th>Wk 6</th>
+                    <th>Wk 7</th>
+                    <th>Wk 8</th>
+                    <th>Wk 9</th>
+                    <th>Wk 10</th>
+                    <th>Wk 11</th>
+                    <th>Wk 12</th>
+                    <th>Wk 13</th>
+                    <th>Wk 14</th>
+                    <th>Hours</th>
+                    <th>Billing</th>
+                  </tr>
+                  <tr>
+                    <td>Preliminary Schedule</td>
+                    <td>$150</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10</td>
+                    <td>$1500</td>
+                  </tr>
+                  <tr>
+                    <td>Preliminary Budget</td>
+                    <td>$150</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10</td>
+                    <td>$1500</td>
+                  </tr>
+                  <tr>
+                    <td>Technical Specification</td>
+                    <td>$150</td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>10</td>
+                    <td>$1500</td>
+                  </tr>
+                  <tr>
+                    <td>Project Brief</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>$450</td>
+                  </tr>
+                  <tr>
+                    <td>Project Proposal</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td>$600</td>
+                  </tr>
+                  <tr>
+                    <td>Content Solution</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td>7</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>7</td>
+                    <td>$1050</td>
+                  </tr>
+                  <tr>
+                    <td>Creative Solution</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td>$1200</td>
+                  </tr>
+                  <tr>
+                    <td>Technical Solution</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td>$1200</td>
+                  </tr>
+                  <tr>
+                    <td>Management Solution</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>8</td>
+                    <td>$1200</td>
+                  </tr>
+                  <tr>
+                    <td>Proposal Review</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>$300</td>
+                  </tr>
+                  <tr>
+                    <td>Proposal Specification</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>18</td>
+                    <td>$2700</td>
+                  </tr>
+                  <tr>
+                    <td>Project Scoping</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>6</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>18</td>
+                    <td>$2700</td>
+                  </tr>
+                  <tr>
+                    <td>Change Management</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td>$600</td>
+                  </tr>
+                  <tr>
+                    <td>Content Delivery Plan</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>Asset Preparation</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>Test Development</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>6</td>
+                    <td>6</td>
+                    <td>8</td>
+                    <td></td>
+                    <td></td>
+                    <td>20</td>
+                    <td>$3000</td>
+                  </tr>
+                  <tr>
+                    <td>Wireframing</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td></td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>Style Guide Development</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>QA Testing</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>Development</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>5</td>
+                    <td>5</td>
+                    <td>$750</td>
+                  </tr>
+                  <tr>
+                    <td>Final Testing</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>$300</td>
+                  </tr>
+                  <tr>
+                    <td>Production Activation</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>1</td>
+                    <td>1</td>
+                    <td>$150</td>
+                  </tr>
+                  <tr>
+                    <td>Handover Briefing</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>2</td>
+                    <td>2</td>
+                    <td>$300</td>
+                  </tr>
+                  <tr>
+                    <td>Final Bug Fix</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>$450</td>
+                  </tr>
+                  <tr>
+                    <td>Project Review</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>4</td>
+                    <td>4</td>
+                    <td>$600</td>
+                  </tr>
+                  <tr>
+                    <td>Performance Analysis</td>
+                    <td>$150</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td>3</td>
+                    <td>3</td>
+                    <td>$450</td>
+                  </tr>
+                  <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td colspan="2">Total: </td>
+                    <td>175</td>
+                    <td>$26,250</td>
+                  </tr>
+                </table>
+              </p>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Line Item and Ongoing Costs</h3>
+              <p class="list-group-item-text">
+                <table class="table">
+                  <tr>
+                    <th>Description</th>
+                    <th>Costs</th>
+                  </tr>
+                  <tr>
+                    <td>Webmaster Training</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>Web Development Software</td>
+                    <td>$500</td>
+                  </tr>
+                  <tr>
+                    <td>Web Hosting</td>
+                    <td>$75/mo.</td>
+                  </tr>
+                  <tr>
+                    <td>Web Site Maintenance</td>
+                    <td>10hrs/mo.</td>
+                  </tr>
+                </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Appendix</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Project Brief</h3>
+              <iframe id="brief" sandbox="allow-scripts allow-same-origin allow-popups" src="http://docs.google.com/gview?url=http://bstrdsmkr.github.io/web2400/assets/ZachGuzman-brief.pdf&embedded=true" onload='javascript:resizeIframe(this);' frameborder="0" scrolling="no" style="border: 0; width: 100%; height: 100%;">
+              </iframe>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Project Proprosal</h3>
+              <iframe id="proposal" sandbox="allow-scripts allow-same-origin" src="ZachGuzman-proposal.html" onload='javascript:resizeIframe(this);' frameborder="0" scrolling="no" style="border: 0; width: 100%;">
+              </iframe>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Resources</h3>
+              <p class="list-group-item-text">
+                The Project schedule (included below) shall be the sole source of authority for deadlines and project tasks. Any task not listed on the schedule shall not be considered part of the project. Any incremental tasks to be added to the schedule will necessatate
+                rearranging the schedule to account for the additional resource expenditure estimation for the new task. Scheduling will be re-evaluated upon completion of each phase and client approval will be sought for any necessary changes.
+              </p>
+              <iframe id="resume" sandbox="allow-scripts allow-same-origin" src="resume.html" onload='javascript:resizeIframe(this);' frameborder="0" scrolling="no" style="border: 0; width: 100%;">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    </div>
+    <script src="javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="javascripts/ripples.min.js" type="text/javascript"></script>
+    <script src="javascripts/material.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.fn.gantt.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.toc-1.1.4.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.md5.js" type="text/javascript"></script>
+    <script src="javascripts/mustache.js" type="text/javascript"></script>
+    <script src="javascripts/github-commit-history.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+        $.material.ripples();
+        $.material.radio();
+        $.material.input();
+        $.material.checkbox();
+        $('#toc').toc({
+          autoId: true,
+          // numerate: false
+        });
+        $('#version-history').GithubCommitHistory({
+          username: "bstrdsmkr",
+          repo: "web2400",
+          branch: "gh-pages",
+          path: "ZachGuzman-proposal.html",
+          limit: 100,
+          offset: 0
+        });
+        $(".gantt").gantt({
+          source: "assets/specification_gantt.json",
+          navigate: "scroll",
+          itemsPerPage: 99
+        });
+        $(window).on('resize', function() {
+          resizeIframe($("#resume"));
+        });
+      });
+    </script>
+  </body>
+
+</html>

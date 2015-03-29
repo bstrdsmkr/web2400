@@ -1,0 +1,20 @@
+<div class="commit">
+  <div class="message">
+    <pre>
+      {{#commit}}
+      <a href="http://www.github.com/{{username}}/{{repo}}/commit/{{sha}}">{{message}}</a>
+      {{/commit}}
+    </pre>
+  </div>
+  <div class="author">
+    {{#author}}
+    <div class="gravatar">
+      <img src="{{avatar_url}}" alt="" width="30" height="30"  />
+    </div>
+    <div class="name"><a href="http://www.github.com/{{login}}">{{/author}}{{#commit}}{{#author}}{{name}}</a> <span>(author)</span></div>
+    <div class="date">
+      <abbr class="relatize" title="{{date}}">{{date}}</abbr>
+    </div>
+    {{/author}}{{/commit}}
+  </div>
+</div>

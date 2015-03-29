@@ -1,0 +1,347 @@
+[{
+  "name": "Preproduction", "desc": "",
+    "values": [{
+      "from": "/Date(1422334799000)/",
+      "to": "/Date(1427169599000)/",
+      "label": "Preproduction",
+      "customClass": "ganttRed"
+    }]
+},{
+  "name": "Production", "desc": "",
+  "values": [{
+    "from": "/Date(1427126399000)/",
+    "to": "/Date(1430193599000)/",
+    "label": "Production",
+    "customClass": "ganttYellow"
+  }]
+},{
+  "name": "Maintenance", "desc": "",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Maintenance",
+    "customClass": "ganttOrange"
+  }]
+},{
+  "name": "Evaluation", "desc": "",
+  "values": [{
+    "from": "/Date(1430193599000)/",
+    "to": "/Date(1430625599000)/",
+    "label": "Evaluation",
+    "customClass": "ganttBlue"
+  }]
+},{
+  "name": "Team Resources", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": " ", "desc": "Zach Guzman",
+  "values": [{
+    "from": "/Date(1422334799000)/",
+    "to": "/Date(1422971510000)/",
+    "label": "30hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425315599000)/",
+    "label": "40hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1425391114000)/",
+    "to": "/Date(1427810314000)/",
+    "label": "40hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1427810314000)/",
+    "to": "/Date(1429019914000)/",
+    "label": "30hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "40hrs",
+    "customClass": "ganttRed"
+  },{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "15hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "Clarification", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "1.1", "desc": "Preliminary Schedule",
+  "values": [{
+    "from": "/Date(1422334799000)/",
+    "to": "/Date(1422971510000)/",
+    "label": "10hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "1.2", "desc": "Preliminary Budget",
+  "values": [{
+    "from": "/Date(1422334799000)/",
+    "to": "/Date(1422971510000)/",
+    "label": "10hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "1.3", "desc": "Technical Specification",
+  "values": [{
+    "from": "/Date(1422334799000)/",
+    "to": "/Date(1422971510000)/",
+    "label": "10hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "Solution Definition", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "2.1", "desc": "Project Brief",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "3hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.2", "desc": "Project Proposal",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "4hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.3", "desc": "Content Solution",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "7hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.4", "desc": "Creative Solution",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "8hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.5", "desc": "Technical Solution",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "8hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.6", "desc": "Management Solution",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "8hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "2.7", "desc": "Proposal Review",
+  "values": [{
+    "from": "/Date(1422971510000)/",
+    "to": "/Date(1425391114000)/",
+    "label": "2hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "Specification", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "3.1", "desc": "Proposal Specification",
+  "values": [{
+    "from": "/Date(1425391114000)/",
+    "to": "/Date(1427810314000)/",
+    "label": "18hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "3.2", "desc": "Project Scoping",
+  "values": [{
+    "from": "/Date(1425391114000)/",
+    "to": "/Date(1427810314000)/",
+    "label": "18hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "3.3", "desc": "Change Management",
+  "values": [{
+    "from": "/Date(1425391114000)/",
+    "to": "/Date(1427810314000)/",
+    "label": "4hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "Content", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "4.1", "desc": "Content Delivery Plan",
+  "values": [{
+    "from": "/Date(1427810314000)/",
+    "to": "/Date(1429019914000)/",
+    "label": "5hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "4.2", "desc": "Asset Preparation",
+  "values": [{
+    "from": "/Date(1427810314000)/",
+    "to": "/Date(1429019914000)/",
+    "label": "5hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "4.3", "desc": "Test Development",
+  "values": [{
+    "from": "/Date(1427810314000)/",
+    "to": "/Date(1429019914000)/",
+    "label": "20hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "Design & Construction", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "5.1", "desc": "Wireframing",
+  "values": [{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "5hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "5.2", "desc": "Test Development",
+  "values": [{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "5hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "5.3", "desc": "Style Guide Development",
+  "values": [{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "5hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "5.4", "desc": "QA Testing",
+  "values": [{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "5hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "5.5", "desc": "Development",
+  "values": [{
+    "from": "/Date(1429019914000)/",
+    "to": "/Date(1430143114000)/",
+    "label": "5hrs",
+    "customClass": "ganttRed"
+  }]
+},{
+  "name": "Test, Launch, Transfer", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "6.1", "desc": "Final Testing",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "2hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "6.2", "desc": "Production Activation",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "1hr",
+    "customClass": ""
+  }]
+},{
+  "name": "6.3", "desc": "Handover Briefing",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "2hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "6.4", "desc": "Final Bug Fix",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "3hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "Evaluation & Review", "desc": "",
+  "values": [{
+    "from": "",
+    "to": "",
+    "label": "",
+    "customClass": ""
+  }]
+},{
+  "name": "7.1", "desc": "Project Review",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "4hrs",
+    "customClass": ""
+  }]
+},{
+  "name": "7.2", "desc": "Performance Analysis",
+  "values": [{
+    "from": "/Date(1430143114000)/",
+    "to": "/Date(1430575114000)/",
+    "label": "3hrs",
+    "customClass": ""
+  }]
+}
+]

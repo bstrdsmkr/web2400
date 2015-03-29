@@ -1,0 +1,9 @@
+#toc ul {
+  list-style: none;
+}
+#toc ul li ul {
+  margin-bottom: 0.75em;
+}
+#toc ul li ul li ul {
+  margin-bottom: 0.25em;
+}
