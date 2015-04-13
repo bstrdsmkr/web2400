@@ -1,0 +1,112 @@
+<testsuites>
+    <testsuite name="www.soapiff.com_Execution#1" time="251" tests="6" failures="0" timestamp = "2015-04-12 22:20:31">
+        <testcase name="Linux_Chrome_40" status="0" time="36">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 7 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 7 
+Result: Passed 
+            </system-out>
+        </testcase>
+        <testcase name="Linux_Firefox_35" status="0" time="35">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 8 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 7 
+Result: Passed 
+            </system-out>
+        </testcase>
+        <testcase name="Windows_Safari_5" status="0" time="44">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 9 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 11 
+Result: Passed 
+            </system-out>
+        </testcase>
+        <testcase name="Windows_Internet Explorer_11" status="0" time="45">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 7 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 5 
+Result: Passed 
+            </system-out>
+        </testcase>
+        <testcase name="Windows_Chrome_40" status="0" time="41">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 13 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 9 
+Result: Passed 
+            </system-out>
+        </testcase>
+        <testcase name="Windows_Firefox_35" status="0" time="50">
+            <system-out>
+----------------------------
+Step-0 
+Command: open 
+Target: / 
+Value:  
+Duration: 11 
+Result: Passed 
+----------------------------
+Step-1 
+Command: open 
+Target: /index.html 
+Value:  
+Duration: 7 
+Result: Passed 
+            </system-out>
+        </testcase>
+    </testsuite>
+</testsuites>

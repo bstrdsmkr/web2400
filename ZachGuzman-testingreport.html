@@ -1,0 +1,2963 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/material-wfont.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/bootstrap-social.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/ripples.min.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/gantt.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/custom.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/toc.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/gh-commit.css">
+    <link rel="stylesheet" type="text/css" media="all" href="stylesheets/syntax_only.css">
+    <link rel="stylesheet" type="text/css" media="all" href="http://fonts.googleapis.com/css?family=Montserrat|Poiret+One">
+    <script language="javascript" type="text/javascript">
+      function resizeIframe(obj) {
+        obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+      }
+    </script>
+    <style>
+      /* Bootstrap 3.x re-reset */
+
+      .fn-gantt *,
+      .fn-gantt *:after,
+      .fn-gantt *:before {
+        -webkit-box-sizing: content-box;
+        -moz-box-sizing: content-box;
+        box-sizing: content-box;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="header" class="jumbotron col-xs-10 col-xs-offset-1">
+      <div id="left-side" class="col-sm-7">
+        <p>Testing Report</p>
+        <p class="yellow">Introduction</p>
+        <p>
+          This report serves both as documentation and as an affidavit of completion for all tests used to verify and evaluate the health and completion of the SOAPIFF project. These tests will be ran periodically throughout the production of the site in order
+          to promote efficiency and ensure that a quality product is delivered to the customer. Additionally, these tests shall be ran one final time after completion of production, but before delivery as a requirement for the Project Manager&#8217;s Release
+          to Delivery.
+        </p>
+      </div>
+      <span class="vertical-divider hidden-xs"></span>
+      <div class="col-sm-offset-8">
+        <div><i class="icon header-info mdi-action-account-balance"></i> SOAPIFF</div>
+        <div><i class="icon header-info mdi-communication-contacts"></i> Michael Tomlinson - Client contact</div>
+        <div><i class="icon header-info mdi-content-mail"></i> Zach Guzman - Project Manager</div>
+        <div><i class="icon header-info mdi-social-public"></i> www.linkedin.com/in/zachguzman</div>
+      </div>
+    </div>
+    <div id="content" class="col-xs-10 col-xs-offset-1">
+      <section class="row" id="toc">
+        <h2>Table of Contents</h2>
+      </section>
+      <section class="row">
+        <h2>Automated Testing</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <p class="list-group-item-text">
+                These tests shall be automatically invoked by the Continuous integration system each time a developer makes a change to the code base. Changes will not be accepted into the master branch until all tests are passing when ran against the proposed code.
+              </p>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Features under test</h3>
+              <figure class='code'><figcaption><span>&#8220;Features&#8221;  (home.feature)</span> <a href='/downloads/code/testing/features/home.feature'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+</pre></td><td class='code'><pre><code class='cucumber'><span class='line'><span class="k">Feature:</span><span class="nf"> Homepage</span>
+</span><span class='line'><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Check for the SOAPIFF logo</span>
+</span><span class='line'><span class="k">    Given </span><span class="nf">I am on the homepage</span>
+</span><span class='line'><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see the image &quot;</span><span class="s">soapiff_logo.png</span><span class="nf">&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Check for Facebook link</span>
+</span><span class='line'><span class="k">    Given </span><span class="nf">I am on the homepage</span>
+</span><span class='line'><span class="nf">    </span><span class="k">Then </span><span class="nf">there should be a link to &quot;</span><span class="s">https://www.facebook.com/soapiff?fref=ts</span><span class="nf">&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Test Steps</h3>
+              <figure class='code'><figcaption><span>&#8220;Test steps&#8221;  (home_steps.rb)</span> <a href='/downloads/code/testing/features/step_definitions/home_steps.rb'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+</pre></td><td class='code'><pre><code class='cucumber'><span class='line'><span class="k">Given </span><span class="nf">/^I am on the homepage$/ do</span>
+</span><span class='line'><span class="nf">  visit(&#39;/&#39;)</span>
+</span><span class='line'><span class="nf">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">Then </span><span class="nf">/^I should see the image &quot;</span><span class="s">(.+)</span><span class="nf">&quot;$/ do |image|</span>
+</span><span class='line'><span class="nf">  expect(page).to have_xpath(&quot;</span><span class="s">//img[contains(@src, \</span><span class="nf">&quot;#{image}\&quot;</span><span class="s">)]</span><span class="nf">&quot;)</span>
+</span><span class='line'><span class="nf">end</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">Then </span><span class="nf">/^there should be a link to &quot;</span><span class="s">(.+)</span><span class="nf">&quot;$/ do |url|</span>
+</span><span class='line'><span class="nf">  expect(page).to have_xpath(&quot;</span><span class="s">//a[contains(@href, \</span><span class="nf">&quot;#{url}\&quot;</span><span class="s">)]</span><span class="nf">&quot;)</span>
+</span><span class='line'><span class="nf">end</span>
+</span></code></pre></td></tr></table></div></figure>
+            </div>
+          </div>
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Report</h3>
+              <figure class='code'><figcaption><span>&#8220;Cucumber Report&#8221;  (results.sh)</span> <a href='/downloads/code/testing/results.sh'>download</a></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='cucumber'><span class='line'><span class="k">Feature:</span><span class="nf"> Homepage</span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Check for the SOAPIFF logo             # features/home.feature:2</span>
+</span><span class='line'><span class="k">    Given </span><span class="nf">I am on the homepage                     # features/step_definitions/home_steps.rb:</span><span class="s">1</span><span class="nf"></span>
+</span><span class='line'><span class="nf">    </span><span class="k">Then </span><span class="nf">I should see the image &quot;</span><span class="s">soapiff_logo.png</span><span class="nf">&quot; # features/step_definitions/home_steps.rb:</span><span class="s">5</span><span class="nf"></span>
+</span><span class='line'>
+</span><span class='line'><span class="nf">  </span><span class="k">Scenario:</span><span class="nf"> Check for Facebook link                                           # features/home.feature:6</span>
+</span><span class='line'><span class="k">    Given </span><span class="nf">I am on the homepage                                                # features/step_definitions/home_steps.rb:</span><span class="s">1</span><span class="nf"></span>
+</span><span class='line'><span class="nf">    </span><span class="k">Then </span><span class="nf">there should be a link to &quot;</span><span class="s">https://www.facebook.com/soapiff?fref=ts</span><span class="nf">&quot; # features/step_definitions/home_steps.rb:</span><span class="s">9</span><span class="nf"></span>
+</span><span class='line'>
+</span><span class='line'><span class="s">2</span><span class="nf"> scenarios (</span><span class="s">2</span><span class="nf"> passed)</span>
+</span><span class='line'><span class="s">4</span><span class="nf"> steps (</span><span class="s">4</span><span class="nf"> passed)</span>
+</span><span class='line'><span class="s">0</span><span class="nf">m</span><span class="s">7.755</span><span class="nf">s</span>
+</span></code></pre></td></tr></table></div></figure>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Copy proofing</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Completion Dates</h3>
+              <p class="list-group-item-text">
+                <table class="table">
+                  <tr>
+                    <th>Proofer</th>
+                    <th>Date</th>
+                  </tr>
+                  <tr>
+                    <td>Zach Guzman</td>
+                    <td>10 April 2015</td>
+                  </tr>
+                  <tr>
+                    <td>Selena Price</td>
+                    <td>12 April 2015</td>
+                  </tr>
+                  <tr>
+                    <td>Michael Tomlinson</td>
+                    <td>TBD</td>
+                  </tr>
+                </table>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Standards Validation</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Testing report</h3>
+              <p class="list-group-item-text">
+                The following report was generated by the HTML5 standards validator at http://html5.validator.nu and reflects the site&#8217;s current state of compliance with the W3C HTML5 standard.
+              </p>
+              <ol>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Almost standards mode doctype. Expected
+                      <code>&lt;!DOCTYPE html&gt;</code>.</span>
+                  </p>
+                  <ol>
+                    <li value="1">
+                      <p class="location">From line
+                        <span class="first-line">1</span>, column
+                        <span class="first-col">1</span>; to line
+                        <span class="last-line">1</span>, column
+                        <span class="last-col">121</span>
+                      </p>
+                      <p class="extract">
+                        <code><b>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>&lt;html</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>An
+                      <code>img</code> element must have an
+                      <code>alt</code> attribute, except under certain conditions. For details, consult <a href="http://www.w3.org/wiki/HTML/Usage/TextAlternatives" title="About providing text alternatives for images.">guidance on providing text alternatives for images</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="2">
+                      <p class="location">From line
+                        <span class="first-line">136</span>, column
+                        <span class="first-col">153</span>; to line
+                        <span class="last-line">136</span>, column
+                        <span class="last-col">236</span>
+                      </p>
+                      <p class="extract">
+                        <code>.gif',1)"&gt;<b>&lt;img src="images/arrow/soapiff-arrow-up.gif" width="59" height="100" id="Image12" /&gt;</b>&lt;/a&gt;&lt;/</code>
+                      </p>
+                    </li>
+                    <li value="12">
+                      <p class="location">From line
+                        <span class="first-line">149</span>, column
+                        <span class="first-col">50</span>; to line
+                        <span class="last-line">149</span>, column
+                        <span class="last-col">116</span>
+                      </p>
+                      <p class="extract">
+                        <code>dex.html"&gt;<b>&lt;img src="images/logo/soapiff_logo.png" width="301" height="128" /&gt;</b>&lt;/a&gt;&lt;/</code>
+                      </p>
+                    </li>
+                    <li value="17">
+                      <p class="location">From line
+                        <span class="first-line">157</span>, column
+                        <span class="first-col">55</span>; to line
+                        <span class="last-line">157</span>, column
+                        <span class="last-col">124</span>
+                      </p>
+                      <p class="extract">
+                        <code>index="0"&gt;<b>&lt;img src="images/navigation/up_submit.jpg" width="1000" height="52" /&gt;</b>&lt;/div&gt;</code>
+                      </p>
+                    </li>
+                    <li value="23">
+                      <p class="location">From line
+                        <span class="first-line">163</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">163</span>, column
+                        <span class="last-col">91</span>
+                      </p>
+                      <p class="extract">
+                        <code>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <b>&lt;img src="images/arrow/3arrows.png" width="93" height="42" /&gt;</b>&lt;/td&gt;
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="47">
+                      <p class="location">From line
+                        <span class="first-line">207</span>, column
+                        <span class="first-col">55</span>; to line
+                        <span class="last-line">207</span>, column
+                        <span class="last-col">124</span>
+                      </p>
+                      <p class="extract">
+                        <code>index="0"&gt;<b>&lt;img src="images/navigation/up_attend.jpg" width="1000" height="52" /&gt;</b>&lt;/div&gt;</code>
+                      </p>
+                    </li>
+                    <li value="51">
+                      <p class="location">From line
+                        <span class="first-line">211</span>, column
+                        <span class="first-col">39</span>; to line
+                        <span class="last-line">211</span>, column
+                        <span class="last-col">100</span>
+                      </p>
+                      <p class="extract">
+                        <code>"&gt;&nbsp; &nbsp; &nbsp; &nbsp; <b>&lt;img src="images/arrow/attend.png" width="100" height="113" /&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="73">
+                      <p class="location">From line
+                        <span class="first-line">244</span>, column
+                        <span class="first-col">108</span>; to line
+                        <span class="last-line">244</span>, column
+                        <span class="last-col">170</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;img src="images/arrow/welcome.png" width="350" height="383" /&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="77">
+                      <p class="location">From line
+                        <span class="first-line">250</span>, column
+                        <span class="first-col">25</span>; to line
+                        <span class="last-line">250</span>, column
+                        <span class="last-col">105</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;img src="images/posters/soapiff_retrospective_2.jpg" width="400" height="618" /&gt;</b>&lt;/td&gt;
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="79">
+                      <p class="location">From line
+                        <span class="first-line">257</span>, column
+                        <span class="first-col">37</span>; to line
+                        <span class="last-line">257</span>, column
+                        <span class="last-col">103</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="402"&gt;<b>&lt;img src="images/posters/soapiff-2.jpg" width="375" height="577" /&gt;</b>&lt;/td&gt;
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="82">
+                      <p class="location">From line
+                        <span class="first-line">263</span>, column
+                        <span class="first-col">25</span>; to line
+                        <span class="last-line">263</span>, column
+                        <span class="last-col">91</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;img src="images/posters/soapiff-1.jpg" width="378" height="582" /&gt;</b>&lt;/td&gt;
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="142">
+                      <p class="location">From line
+                        <span class="first-line">441</span>, column
+                        <span class="first-col">49</span>; to line
+                        <span class="last-line">441</span>, column
+                        <span class="last-col">120</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;img src="images/arrow/festival-trailers.png" width="350" height="80" /&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="151">
+                      <p class="location">From line
+                        <span class="first-line">482</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">482</span>, column
+                        <span class="last-col">79</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;img src="images/navigation/up_blank.jpg" width="1000" height="52" /&gt;</b>&lt;/td&gt;
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="195">
+                      <p class="location">From line
+                        <span class="first-line">729</span>, column
+                        <span class="first-col">192</span>; to line
+                        <span class="last-line">729</span>, column
+                        <span class="last-col">281</span>
+                      </p>
+                      <p class="extract">
+                        <code>.png',1)"&gt;<b>&lt;img src="images/navigation-bottom/images/nav-bottom_up_04.png" width="515" height="30" /&gt;</b>&lt;/a&gt;&lt;/</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Bad value
+                      <code>#FFFFFF</code> for attribute
+                      <code>tabindex</code> on element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-div-element">
+                        <code>div</code>
+                      </a>: Expected a minus sign or a digit but saw
+                      <code>#</code> instead.</span>
+                  </p>
+                  <dl>
+                    <dt>Syntax of integer:</dt>
+                    <dd>One or more digits (
+                      <code>0</code>–
+                      <code>9</code>), optionally preceded by a hyphen (
+                      <code>-</code>). For example:
+                      <code>42</code> and
+                      <code>-273</code> are valid, but
+                      <code>+42</code> is not.
+                    </dd>
+                  </dl>
+                  <ol>
+                    <li value="3">
+                      <p class="location">From line
+                        <span class="first-line">138</span>, column
+                        <span class="first-col">1</span>; to line
+                        <span class="last-line">138</span>, column
+                        <span class="last-col">108</span>
+                      </p>
+                      <p class="extract">
+                        <code>v&gt;
+                          <span class="lf" title="Line break">↩</span>&lt;br /&gt;
+                          <span class="lf" title="Line break">↩</span><b>&lt;div id="Accordion1" style="position: absolute; left: 56px; top: 300;" class="Accordion" tabindex="#FFFFFF"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;ta</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>width</code> attribute on the
+                      <code>table</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="4">
+                      <p class="location">From line
+                        <span class="first-line">139</span>, column
+                        <span class="first-col">3</span>; to line
+                        <span class="last-line">139</span>, column
+                        <span class="last-col">32</span>
+                      </p>
+                      <p class="extract">
+                        <code>FFFFF"&gt;
+                          <span class="lf" title="Line break">↩</span> <b>&lt;table width="800" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;</code>
+                      </p>
+                    </li>
+                    <li value="9">
+                      <p class="location">From line
+                        <span class="first-line">147</span>, column
+                        <span class="first-col">29</span>; to line
+                        <span class="last-line">147</span>, column
+                        <span class="last-col">59</span>
+                      </p>
+                      <p class="extract">
+                        <code>"#FFFFFF"&gt;<b>&lt;table width="1001" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="18">
+                      <p class="location">From line
+                        <span class="first-line">159</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">159</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="961" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="28">
+                      <p class="location">From line
+                        <span class="first-line">165</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">165</span>, column
+                        <span class="last-col">92</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="703"&gt;<b>&lt;table width="715" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="48">
+                      <p class="location">From line
+                        <span class="first-line">209</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">209</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="873" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="56">
+                      <p class="location">From line
+                        <span class="first-line">220</span>, column
+                        <span class="first-col">44</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">105</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="304" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="63">
+                      <p class="location">From line
+                        <span class="first-line">241</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">241</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="979" border="0" cellpadding="10" cellspacing="2"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="74">
+                      <p class="location">From line
+                        <span class="first-line">248</span>, column
+                        <span class="first-col">39</span>; to line
+                        <span class="last-line">248</span>, column
+                        <span class="last-col">81</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="390" border="0" align="left"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="90">
+                      <p class="location">From line
+                        <span class="first-line">292</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">292</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="875" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="103">
+                      <p class="location">From line
+                        <span class="first-line">324</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">324</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="944" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="111">
+                      <p class="location">From line
+                        <span class="first-line">330</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">330</span>, column
+                        <span class="last-col">46</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="426" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="123">
+                      <p class="location">From line
+                        <span class="first-line">369</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">369</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="400" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;</code>
+                      </p>
+                    </li>
+                    <li value="129">
+                      <p class="location">From line
+                        <span class="first-line">411</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">411</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="486" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="136">
+                      <p class="location">From line
+                        <span class="first-line">435</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">435</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="800" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="140">
+                      <p class="location">From line
+                        <span class="first-line">439</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">439</span>, column
+                        <span class="last-col">60</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="407"&gt;<b>&lt;table width="400" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="143">
+                      <p class="location">From line
+                        <span class="first-line">445</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">445</span>, column
+                        <span class="last-col">52</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;table width="400" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="153">
+                      <p class="location">From line
+                        <span class="first-line">488</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">488</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="802" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="181">
+                      <p class="location">From line
+                        <span class="first-line">702</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">702</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="675" border="0" cellpadding="10" cellspacing="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="192">
+                      <p class="location">From line
+                        <span class="first-line">727</span>, column
+                        <span class="first-col">37</span>; to line
+                        <span class="last-line">727</span>, column
+                        <span class="last-col">79</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="1001" height="22" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>border</code> attribute on the
+                      <code>table</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="5">
+                      <p class="location">From line
+                        <span class="first-line">139</span>, column
+                        <span class="first-col">3</span>; to line
+                        <span class="last-line">139</span>, column
+                        <span class="last-col">32</span>
+                      </p>
+                      <p class="extract">
+                        <code>FFFFF"&gt;
+                          <span class="lf" title="Line break">↩</span> <b>&lt;table width="800" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;</code>
+                      </p>
+                    </li>
+                    <li value="10">
+                      <p class="location">From line
+                        <span class="first-line">147</span>, column
+                        <span class="first-col">29</span>; to line
+                        <span class="last-line">147</span>, column
+                        <span class="last-col">59</span>
+                      </p>
+                      <p class="extract">
+                        <code>"#FFFFFF"&gt;<b>&lt;table width="1001" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="19">
+                      <p class="location">From line
+                        <span class="first-line">159</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">159</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="961" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="31">
+                      <p class="location">From line
+                        <span class="first-line">165</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">165</span>, column
+                        <span class="last-col">92</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="703"&gt;<b>&lt;table width="715" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="49">
+                      <p class="location">From line
+                        <span class="first-line">209</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">209</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="873" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="59">
+                      <p class="location">From line
+                        <span class="first-line">220</span>, column
+                        <span class="first-col">44</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">105</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="304" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="66">
+                      <p class="location">From line
+                        <span class="first-line">241</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">241</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="979" border="0" cellpadding="10" cellspacing="2"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="76">
+                      <p class="location">From line
+                        <span class="first-line">248</span>, column
+                        <span class="first-col">39</span>; to line
+                        <span class="last-line">248</span>, column
+                        <span class="last-col">81</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="390" border="0" align="left"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="91">
+                      <p class="location">From line
+                        <span class="first-line">292</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">292</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="875" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="104">
+                      <p class="location">From line
+                        <span class="first-line">324</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">324</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="944" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="112">
+                      <p class="location">From line
+                        <span class="first-line">330</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">330</span>, column
+                        <span class="last-col">46</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="426" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="125">
+                      <p class="location">From line
+                        <span class="first-line">369</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">369</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="400" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;</code>
+                      </p>
+                    </li>
+                    <li value="131">
+                      <p class="location">From line
+                        <span class="first-line">411</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">411</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="486" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="137">
+                      <p class="location">From line
+                        <span class="first-line">435</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">435</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="800" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="141">
+                      <p class="location">From line
+                        <span class="first-line">439</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">439</span>, column
+                        <span class="last-col">60</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="407"&gt;<b>&lt;table width="400" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="144">
+                      <p class="location">From line
+                        <span class="first-line">445</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">445</span>, column
+                        <span class="last-col">52</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;table width="400" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="154">
+                      <p class="location">From line
+                        <span class="first-line">488</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">488</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="802" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="184">
+                      <p class="location">From line
+                        <span class="first-line">702</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">702</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="675" border="0" cellpadding="10" cellspacing="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="193">
+                      <p class="location">From line
+                        <span class="first-line">727</span>, column
+                        <span class="first-col">37</span>; to line
+                        <span class="last-line">727</span>, column
+                        <span class="last-col">79</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="1001" height="22" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-info">Warning</strong>:
+                    <span>The
+                      <code>name</code> attribute is obsolete. Consider putting an
+                      <code>id</code> attribute on the nearest container instead.</span>
+                  </p>
+                  <ol>
+                    <li value="6">
+                      <p class="location">From line
+                        <span class="first-line">141</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">141</span>, column
+                        <span class="last-col">33</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;a name="top" id="top"&gt;</b>&lt;/a&gt;&lt;/</code>
+                      </p>
+                    </li>
+                    <li value="7">
+                      <p class="location">From line
+                        <span class="first-line">144</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">144</span>, column
+                        <span class="last-col">35</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;a name="top2" id="top2"&gt;</b>&lt;/a&gt;&lt;/</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>bgcolor</code> attribute on the
+                      <code>td</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="8">
+                      <p class="location">From line
+                        <span class="first-line">146</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">147</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#FFFFFF"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="16">
+                      <p class="location">From line
+                        <span class="first-line">155</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">156</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="33">
+                      <p class="location">From line
+                        <span class="first-line">171</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">172</span>, column
+                        <span class="last-col">52</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="144" bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="35">
+                      <p class="location">From line
+                        <span class="first-line">172</span>, column
+                        <span class="first-col">91</span>; to line
+                        <span class="last-line">173</span>, column
+                        <span class="last-col">69</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="536" bgcolor="#99CCCC" class="expanded"&gt;</b>curren</code>
+                      </p>
+                    </li>
+                    <li value="36">
+                      <p class="location">From line
+                        <span class="first-line">175</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">176</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="37">
+                      <p class="location">From line
+                        <span class="first-line">176</span>, column
+                        <span class="first-col">76</span>; to line
+                        <span class="last-line">177</span>, column
+                        <span class="last-col">57</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC" class="expanded"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="38">
+                      <p class="location">From line
+                        <span class="first-line">179</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">180</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="39">
+                      <p class="location">From line
+                        <span class="first-line">180</span>, column
+                        <span class="first-col">73</span>; to line
+                        <span class="last-line">181</span>, column
+                        <span class="last-col">57</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC" class="expanded"&gt;</b>TBA&lt;/t</code>
+                      </p>
+                    </li>
+                    <li value="41">
+                      <p class="location">From line
+                        <span class="first-line">183</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">184</span>, column
+                        <span class="last-col">53</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td align="left" bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="42">
+                      <p class="location">From line
+                        <span class="first-line">189</span>, column
+                        <span class="first-col">33</span>; to line
+                        <span class="last-line">190</span>, column
+                        <span class="last-col">57</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC" class="expanded"&gt;</b>Appala</code>
+                      </p>
+                    </li>
+                    <li value="43">
+                      <p class="location">From line
+                        <span class="first-line">192</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">193</span>, column
+                        <span class="last-col">40</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="44">
+                      <p class="location">From line
+                        <span class="first-line">193</span>, column
+                        <span class="first-col">80</span>; to line
+                        <span class="last-line">194</span>, column
+                        <span class="last-col">57</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td bgcolor="#99CCCC" class="expanded"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="46">
+                      <p class="location">From line
+                        <span class="first-line">205</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">206</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="62">
+                      <p class="location">From line
+                        <span class="first-line">237</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">238</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="89">
+                      <p class="location">From line
+                        <span class="first-line">288</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">289</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="102">
+                      <p class="location">From line
+                        <span class="first-line">320</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">321</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="135">
+                      <p class="location">From line
+                        <span class="first-line">431</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">432</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="152">
+                      <p class="location">From line
+                        <span class="first-line">484</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">485</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="180">
+                      <p class="location">From line
+                        <span class="first-line">698</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">699</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td bgcolor="#CCCCCC"&gt;</b>&lt;div i</code>
+                      </p>
+                    </li>
+                    <li value="187">
+                      <p class="location">From line
+                        <span class="first-line">708</span>, column
+                        <span class="first-col">41</span>; to line
+                        <span class="last-line">709</span>, column
+                        <span class="last-col">65</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="647" bgcolor="#FF9966" class="expanded"&gt;</b>The So</code>
+                      </p>
+                    </li>
+                    <li value="188">
+                      <p class="location">From line
+                        <span class="first-line">712</span>, column
+                        <span class="first-col">30</span>; to line
+                        <span class="last-line">713</span>, column
+                        <span class="last-col">53</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td bgcolor="#99CCCC" class="expanded"&gt;</b>Mark C</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>width</code> attribute on the
+                      <code>td</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="11">
+                      <p class="location">From line
+                        <span class="first-line">148</span>, column
+                        <span class="first-col">15</span>; to line
+                        <span class="last-line">149</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="369"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="13">
+                      <p class="location">From line
+                        <span class="first-line">149</span>, column
+                        <span class="first-col">126</span>; to line
+                        <span class="last-line">150</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/a&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="574"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="14">
+                      <p class="location">From line
+                        <span class="first-line">150</span>, column
+                        <span class="first-col">40</span>; to line
+                        <span class="last-line">151</span>, column
+                        <span class="last-col">43</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="32" valign="bottom"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="20">
+                      <p class="location">From line
+                        <span class="first-line">160</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">161</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="153" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="24">
+                      <p class="location">From line
+                        <span class="first-line">163</span>, column
+                        <span class="first-col">97</span>; to line
+                        <span class="last-line">164</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>2" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="14" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="27">
+                      <p class="location">From line
+                        <span class="first-line">164</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">165</span>, column
+                        <span class="last-col">30</span>
+                      </p>
+                      <p class="extract">
+                        <code>br /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="703"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="32">
+                      <p class="location">From line
+                        <span class="first-line">171</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">172</span>, column
+                        <span class="last-col">52</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="144" bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="34">
+                      <p class="location">From line
+                        <span class="first-line">172</span>, column
+                        <span class="first-col">91</span>; to line
+                        <span class="last-line">173</span>, column
+                        <span class="last-col">69</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="536" bgcolor="#99CCCC" class="expanded"&gt;</b>curren</code>
+                      </p>
+                    </li>
+                    <li value="45">
+                      <p class="location">From line
+                        <span class="first-line">198</span>, column
+                        <span class="first-col">12</span>; to line
+                        <span class="last-line">199</span>, column
+                        <span class="last-col">29</span>
+                      </p>
+                      <p class="extract">
+                        <code>br /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="10"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="50">
+                      <p class="location">From line
+                        <span class="first-line">210</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">211</span>, column
+                        <span class="last-col">30</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="169"&gt;</b>&nbsp; &nbsp; &nbsp; </code>
+                      </p>
+                    </li>
+                    <li value="52">
+                      <p class="location">From line
+                        <span class="first-line">211</span>, column
+                        <span class="first-col">112</span>; to line
+                        <span class="last-line">212</span>, column
+                        <span class="last-col">60</span>
+                      </p>
+                      <p class="extract">
+                        <code>br /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="384" valign="top" class="expanded"&gt;</b>&lt;p&gt;&lt;br</code>
+                      </p>
+                    </li>
+                    <li value="54">
+                      <p class="location">From line
+                        <span class="first-line">219</span>, column
+                        <span class="first-col">26</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">43</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="306" valign="top"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="60">
+                      <p class="location">From line
+                        <span class="first-line">227</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">228</span>, column
+                        <span class="last-col">33</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="48"&gt;</b>&amp;gt; &amp;</code>
+                      </p>
+                    </li>
+                    <li value="61">
+                      <p class="location">From line
+                        <span class="first-line">228</span>, column
+                        <span class="first-col">53</span>; to line
+                        <span class="last-line">229</span>, column
+                        <span class="last-col">51</span>
+                      </p>
+                      <p class="extract">
+                        <code> &amp;gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td width="221" class="expanded"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="67">
+                      <p class="location">From line
+                        <span class="first-line">242</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">243</span>, column
+                        <span class="last-col">83</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="6" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="70">
+                      <p class="location">From line
+                        <span class="first-line">243</span>, column
+                        <span class="first-col">95</span>; to line
+                        <span class="last-line">244</span>, column
+                        <span class="last-col">85</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="395" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="78">
+                      <p class="location">From line
+                        <span class="first-line">256</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">257</span>, column
+                        <span class="last-col">36</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="402"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                    <li value="83">
+                      <p class="location">From line
+                        <span class="first-line">268</span>, column
+                        <span class="first-col">30</span>; to line
+                        <span class="last-line">269</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>able&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="510" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="92">
+                      <p class="location">From line
+                        <span class="first-line">293</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">294</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="29" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="95">
+                      <p class="location">From line
+                        <span class="first-line">294</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">295</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="647" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="98">
+                      <p class="location">From line
+                        <span class="first-line">312</span>, column
+                        <span class="first-col">22</span>; to line
+                        <span class="last-line">313</span>, column
+                        <span class="last-col">29</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="43"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="99">
+                      <p class="location">From line
+                        <span class="first-line">313</span>, column
+                        <span class="first-col">41</span>; to line
+                        <span class="last-line">314</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="138" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="105">
+                      <p class="location">From line
+                        <span class="first-line">325</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">326</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="23" align="left" valign="top"&gt;</b>&lt;p id=</code>
+                      </p>
+                    </li>
+                    <li value="108">
+                      <p class="location">From line
+                        <span class="first-line">326</span>, column
+                        <span class="first-col">81</span>; to line
+                        <span class="last-line">327</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="327" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="113">
+                      <p class="location">From line
+                        <span class="first-line">331</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">332</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="221" align="left" valign="top"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                    <li value="116">
+                      <p class="location">From line
+                        <span class="first-line">332</span>, column
+                        <span class="first-col">160</span>; to line
+                        <span class="last-line">333</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code>3" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="195" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="120">
+                      <p class="location">From line
+                        <span class="first-line">366</span>, column
+                        <span class="first-col">36</span>; to line
+                        <span class="last-line">367</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="269" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="127">
+                      <p class="location">From line
+                        <span class="first-line">373</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">374</span>, column
+                        <span class="last-col">22</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td width="123"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="128">
+                      <p class="location">From line
+                        <span class="first-line">374</span>, column
+                        <span class="first-col">57</span>; to line
+                        <span class="last-line">375</span>, column
+                        <span class="last-col">22</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td width="231"&gt;</b>&lt;em&gt;Fo</code>
+                      </p>
+                    </li>
+                    <li value="133">
+                      <p class="location">From line
+                        <span class="first-line">415</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">416</span>, column
+                        <span class="last-col">36</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="123"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="134">
+                      <p class="location">From line
+                        <span class="first-line">416</span>, column
+                        <span class="first-col">134</span>; to line
+                        <span class="last-line">417</span>, column
+                        <span class="last-col">36</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="317"&gt;</b>&lt;em&gt;fo</code>
+                      </p>
+                    </li>
+                    <li value="138">
+                      <p class="location">From line
+                        <span class="first-line">436</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">437</span>, column
+                        <span class="last-col">29</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="22"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="139">
+                      <p class="location">From line
+                        <span class="first-line">438</span>, column
+                        <span class="first-col">28</span>; to line
+                        <span class="last-line">439</span>, column
+                        <span class="last-col">30</span>
+                      </p>
+                      <p class="extract">
+                        <code>br /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="407"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="145">
+                      <p class="location">From line
+                        <span class="first-line">446</span>, column
+                        <span class="first-col">25</span>; to line
+                        <span class="last-line">447</span>, column
+                        <span class="last-col">37</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                      &lt;td width="61"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="146">
+                      <p class="location">From line
+                        <span class="first-line">447</span>, column
+                        <span class="first-col">64</span>; to line
+                        <span class="last-line">448</span>, column
+                        <span class="last-col">38</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                      &lt;td width="312"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="150">
+                      <p class="location">From line
+                        <span class="first-line">468</span>, column
+                        <span class="first-col">28</span>; to line
+                        <span class="last-line">469</span>, column
+                        <span class="last-col">30</span>
+                      </p>
+                      <p class="extract">
+                        <code>able&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="357"&gt;</b>&lt;p&gt;&lt;a </code>
+                      </p>
+                    </li>
+                    <li value="167">
+                      <p class="location">From line
+                        <span class="first-line">513</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">514</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="25" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="170">
+                      <p class="location">From line
+                        <span class="first-line">514</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">515</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="62" align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="173">
+                      <p class="location">From line
+                        <span class="first-line">515</span>, column
+                        <span class="first-col">82</span>; to line
+                        <span class="last-line">516</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="701" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="185">
+                      <p class="location">From line
+                        <span class="first-line">707</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">708</span>, column
+                        <span class="last-col">29</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="18"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="186">
+                      <p class="location">From line
+                        <span class="first-line">708</span>, column
+                        <span class="first-col">41</span>; to line
+                        <span class="last-line">709</span>, column
+                        <span class="last-col">65</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="647" bgcolor="#FF9966" class="expanded"&gt;</b>The So</code>
+                      </p>
+                    </li>
+                    <li value="194">
+                      <p class="location">From line
+                        <span class="first-line">728</span>, column
+                        <span class="first-col">15</span>; to line
+                        <span class="last-line">729</span>, column
+                        <span class="last-col">28</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="522"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="196">
+                      <p class="location">From line
+                        <span class="first-line">729</span>, column
+                        <span class="first-col">291</span>; to line
+                        <span class="last-line">730</span>, column
+                        <span class="last-col">69</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/a&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="469" align="right" valign="top" class="small"&gt;</b>site d</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>valign</code> attribute on the
+                      <code>td</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="15">
+                      <p class="location">From line
+                        <span class="first-line">150</span>, column
+                        <span class="first-col">40</span>; to line
+                        <span class="last-line">151</span>, column
+                        <span class="last-col">43</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="32" valign="bottom"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="22">
+                      <p class="location">From line
+                        <span class="first-line">160</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">161</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="153" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="26">
+                      <p class="location">From line
+                        <span class="first-line">163</span>, column
+                        <span class="first-col">97</span>; to line
+                        <span class="last-line">164</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>2" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="14" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="53">
+                      <p class="location">From line
+                        <span class="first-line">211</span>, column
+                        <span class="first-col">112</span>; to line
+                        <span class="last-line">212</span>, column
+                        <span class="last-col">60</span>
+                      </p>
+                      <p class="extract">
+                        <code>br /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="384" valign="top" class="expanded"&gt;</b>&lt;p&gt;&lt;br</code>
+                      </p>
+                    </li>
+                    <li value="55">
+                      <p class="location">From line
+                        <span class="first-line">219</span>, column
+                        <span class="first-col">26</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">43</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="306" valign="top"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="69">
+                      <p class="location">From line
+                        <span class="first-line">242</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">243</span>, column
+                        <span class="last-col">83</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="6" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="72">
+                      <p class="location">From line
+                        <span class="first-line">243</span>, column
+                        <span class="first-col">95</span>; to line
+                        <span class="last-line">244</span>, column
+                        <span class="last-col">85</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="395" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="81">
+                      <p class="location">From line
+                        <span class="first-line">259</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">260</span>, column
+                        <span class="last-col">49</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td height="80" valign="top"&gt;</b>poster</code>
+                      </p>
+                    </li>
+                    <li value="85">
+                      <p class="location">From line
+                        <span class="first-line">268</span>, column
+                        <span class="first-col">30</span>; to line
+                        <span class="last-line">269</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>able&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="510" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="87">
+                      <p class="location">From line
+                        <span class="first-line">274</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">275</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="94">
+                      <p class="location">From line
+                        <span class="first-line">293</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">294</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="29" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="97">
+                      <p class="location">From line
+                        <span class="first-line">294</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">295</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="647" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="101">
+                      <p class="location">From line
+                        <span class="first-line">313</span>, column
+                        <span class="first-col">41</span>; to line
+                        <span class="last-line">314</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="138" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="107">
+                      <p class="location">From line
+                        <span class="first-line">325</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">326</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="23" align="left" valign="top"&gt;</b>&lt;p id=</code>
+                      </p>
+                    </li>
+                    <li value="110">
+                      <p class="location">From line
+                        <span class="first-line">326</span>, column
+                        <span class="first-col">81</span>; to line
+                        <span class="last-line">327</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="327" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="115">
+                      <p class="location">From line
+                        <span class="first-line">331</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">332</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="221" align="left" valign="top"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                    <li value="118">
+                      <p class="location">From line
+                        <span class="first-line">332</span>, column
+                        <span class="first-col">160</span>; to line
+                        <span class="last-line">333</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code>3" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="195" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="119">
+                      <p class="location">From line
+                        <span class="first-line">361</span>, column
+                        <span class="first-col">132</span>; to line
+                        <span class="last-line">362</span>, column
+                        <span class="last-col">37</span>
+                      </p>
+                      <p class="extract">
+                        <code>6" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td valign="top"&gt;</b>&lt;a hre</code>
+                      </p>
+                    </li>
+                    <li value="122">
+                      <p class="location">From line
+                        <span class="first-line">366</span>, column
+                        <span class="first-col">36</span>; to line
+                        <span class="last-line">367</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="269" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="156">
+                      <p class="location">From line
+                        <span class="first-line">489</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">490</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="158">
+                      <p class="location">From line
+                        <span class="first-line">490</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">491</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="160">
+                      <p class="location">From line
+                        <span class="first-line">491</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">492</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="162">
+                      <p class="location">From line
+                        <span class="first-line">494</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">495</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="164">
+                      <p class="location">From line
+                        <span class="first-line">495</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">496</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="166">
+                      <p class="location">From line
+                        <span class="first-line">496</span>, column
+                        <span class="first-col">71</span>; to line
+                        <span class="last-line">497</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;h2 id</code>
+                      </p>
+                    </li>
+                    <li value="169">
+                      <p class="location">From line
+                        <span class="first-line">513</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">514</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="25" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="172">
+                      <p class="location">From line
+                        <span class="first-line">514</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">515</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="62" align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="175">
+                      <p class="location">From line
+                        <span class="first-line">515</span>, column
+                        <span class="first-col">82</span>; to line
+                        <span class="last-line">516</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="701" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="177">
+                      <p class="location">From line
+                        <span class="first-line">535</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">536</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="179">
+                      <p class="location">From line
+                        <span class="first-line">536</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">537</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="190">
+                      <p class="location">From line
+                        <span class="first-line">726</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">727</span>, column
+                        <span class="last-col">36</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td align="left" valign="top"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="198">
+                      <p class="location">From line
+                        <span class="first-line">729</span>, column
+                        <span class="first-col">291</span>; to line
+                        <span class="last-line">730</span>, column
+                        <span class="last-col">69</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/a&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="469" align="right" valign="top" class="small"&gt;</b>site d</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>align</code> attribute on the
+                      <code>td</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="21">
+                      <p class="location">From line
+                        <span class="first-line">160</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">161</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="153" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="25">
+                      <p class="location">From line
+                        <span class="first-line">163</span>, column
+                        <span class="first-col">97</span>; to line
+                        <span class="last-line">164</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>2" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="14" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="40">
+                      <p class="location">From line
+                        <span class="first-line">183</span>, column
+                        <span class="first-col">21</span>; to line
+                        <span class="last-line">184</span>, column
+                        <span class="last-col">53</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                  &lt;td align="left" bgcolor="#99CCCC"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="68">
+                      <p class="location">From line
+                        <span class="first-line">242</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">243</span>, column
+                        <span class="last-col">83</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="6" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="71">
+                      <p class="location">From line
+                        <span class="first-line">243</span>, column
+                        <span class="first-col">95</span>; to line
+                        <span class="last-line">244</span>, column
+                        <span class="last-col">85</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="395" rowspan="2" align="left" valign="top" class="expanded"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="84">
+                      <p class="location">From line
+                        <span class="first-line">268</span>, column
+                        <span class="first-col">30</span>; to line
+                        <span class="last-line">269</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>able&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="510" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="86">
+                      <p class="location">From line
+                        <span class="first-line">274</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">275</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="93">
+                      <p class="location">From line
+                        <span class="first-line">293</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">294</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="29" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="96">
+                      <p class="location">From line
+                        <span class="first-line">294</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">295</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="647" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="100">
+                      <p class="location">From line
+                        <span class="first-line">313</span>, column
+                        <span class="first-col">41</span>; to line
+                        <span class="last-line">314</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="138" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="106">
+                      <p class="location">From line
+                        <span class="first-line">325</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">326</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="23" align="left" valign="top"&gt;</b>&lt;p id=</code>
+                      </p>
+                    </li>
+                    <li value="109">
+                      <p class="location">From line
+                        <span class="first-line">326</span>, column
+                        <span class="first-col">81</span>; to line
+                        <span class="last-line">327</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="327" align="left" valign="top"&gt;</b>&lt;br /&gt;</code>
+                      </p>
+                    </li>
+                    <li value="114">
+                      <p class="location">From line
+                        <span class="first-line">331</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">332</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="221" align="left" valign="top"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                    <li value="117">
+                      <p class="location">From line
+                        <span class="first-line">332</span>, column
+                        <span class="first-col">160</span>; to line
+                        <span class="last-line">333</span>, column
+                        <span class="last-col">62</span>
+                      </p>
+                      <p class="extract">
+                        <code>3" /&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td width="195" align="left" valign="top"&gt;</b>&lt;p cla</code>
+                      </p>
+                    </li>
+                    <li value="121">
+                      <p class="location">From line
+                        <span class="first-line">366</span>, column
+                        <span class="first-col">36</span>; to line
+                        <span class="last-line">367</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;/p&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="269" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="155">
+                      <p class="location">From line
+                        <span class="first-line">489</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">490</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="157">
+                      <p class="location">From line
+                        <span class="first-line">490</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">491</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="159">
+                      <p class="location">From line
+                        <span class="first-line">491</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">492</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="161">
+                      <p class="location">From line
+                        <span class="first-line">494</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">495</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="163">
+                      <p class="location">From line
+                        <span class="first-line">495</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">496</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="165">
+                      <p class="location">From line
+                        <span class="first-line">496</span>, column
+                        <span class="first-col">71</span>; to line
+                        <span class="last-line">497</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;h2 id</code>
+                      </p>
+                    </li>
+                    <li value="168">
+                      <p class="location">From line
+                        <span class="first-line">513</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">514</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="25" align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="171">
+                      <p class="location">From line
+                        <span class="first-line">514</span>, column
+                        <span class="first-col">67</span>; to line
+                        <span class="last-line">515</span>, column
+                        <span class="last-col">55</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="62" align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="174">
+                      <p class="location">From line
+                        <span class="first-line">515</span>, column
+                        <span class="first-col">82</span>; to line
+                        <span class="last-line">516</span>, column
+                        <span class="last-col">56</span>
+                      </p>
+                      <p class="extract">
+                        <code>rong&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td width="701" align="left" valign="top"&gt;</b>&lt;span </code>
+                      </p>
+                    </li>
+                    <li value="176">
+                      <p class="location">From line
+                        <span class="first-line">535</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">536</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&amp;nbsp;</code>
+                      </p>
+                    </li>
+                    <li value="178">
+                      <p class="location">From line
+                        <span class="first-line">536</span>, column
+                        <span class="first-col">56</span>; to line
+                        <span class="last-line">537</span>, column
+                        <span class="last-col">44</span>
+                      </p>
+                      <p class="extract">
+                        <code>nbsp;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>              &lt;td align="left" valign="top"&gt;</b>&lt;stron</code>
+                      </p>
+                    </li>
+                    <li value="189">
+                      <p class="location">From line
+                        <span class="first-line">726</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">727</span>, column
+                        <span class="last-col">36</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td align="left" valign="top"&gt;</b>&lt;table</code>
+                      </p>
+                    </li>
+                    <li value="197">
+                      <p class="location">From line
+                        <span class="first-line">729</span>, column
+                        <span class="first-col">291</span>; to line
+                        <span class="last-line">730</span>, column
+                        <span class="last-col">69</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;&lt;/a&gt;&lt;/td&gt;<b><span class="lf" title="Line break">↩</span>            &lt;td width="469" align="right" valign="top" class="small"&gt;</b>site d</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>cellpadding</code> attribute on the
+                      <code>table</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="29">
+                      <p class="location">From line
+                        <span class="first-line">165</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">165</span>, column
+                        <span class="last-col">92</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="703"&gt;<b>&lt;table width="715" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="57">
+                      <p class="location">From line
+                        <span class="first-line">220</span>, column
+                        <span class="first-col">44</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">105</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="304" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="64">
+                      <p class="location">From line
+                        <span class="first-line">241</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">241</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="979" border="0" cellpadding="10" cellspacing="2"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="124">
+                      <p class="location">From line
+                        <span class="first-line">369</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">369</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="400" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span> &lt;</code>
+                      </p>
+                    </li>
+                    <li value="130">
+                      <p class="location">From line
+                        <span class="first-line">411</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">411</span>, column
+                        <span class="last-col">63</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="486" border="0" cellpadding="10"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="182">
+                      <p class="location">From line
+                        <span class="first-line">702</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">702</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="675" border="0" cellpadding="10" cellspacing="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>cellspacing</code> attribute on the
+                      <code>table</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="30">
+                      <p class="location">From line
+                        <span class="first-line">165</span>, column
+                        <span class="first-col">31</span>; to line
+                        <span class="last-line">165</span>, column
+                        <span class="last-col">92</span>
+                      </p>
+                      <p class="extract">
+                        <code>dth="703"&gt;<b>&lt;table width="715" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="58">
+                      <p class="location">From line
+                        <span class="first-line">220</span>, column
+                        <span class="first-col">44</span>; to line
+                        <span class="last-line">220</span>, column
+                        <span class="last-col">105</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="304" border="0" cellpadding="5" cellspacing="5"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="65">
+                      <p class="location">From line
+                        <span class="first-line">241</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">241</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="979" border="0" cellpadding="10" cellspacing="2"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                    <li value="183">
+                      <p class="location">From line
+                        <span class="first-line">702</span>, column
+                        <span class="first-col">11</span>; to line
+                        <span class="last-line">702</span>, column
+                        <span class="last-col">73</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="675" border="0" cellpadding="10" cellspacing="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>align</code> attribute on the
+                      <code>table</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="75">
+                      <p class="location">From line
+                        <span class="first-line">248</span>, column
+                        <span class="first-col">39</span>; to line
+                        <span class="last-line">248</span>, column
+                        <span class="last-col">81</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;table width="390" border="0" align="left"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>height</code> attribute on the
+                      <code>td</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="80">
+                      <p class="location">From line
+                        <span class="first-line">259</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">260</span>, column
+                        <span class="last-col">49</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td height="80" valign="top"&gt;</b>poster</code>
+                      </p>
+                    </li>
+                    <li value="126">
+                      <p class="location">From line
+                        <span class="first-line">370</span>, column
+                        <span class="first-col">9</span>; to line
+                        <span class="last-line">371</span>, column
+                        <span class="last-col">34</span>
+                      </p>
+                      <p class="extract">
+                        <code>&gt;
+                          <span class="lf" title="Line break">↩</span> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>      &lt;td height="42" colspan="2"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                    <li value="132">
+                      <p class="location">From line
+                        <span class="first-line">412</span>, column
+                        <span class="first-col">23</span>; to line
+                        <span class="last-line">413</span>, column
+                        <span class="last-col">48</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;tr&gt;<b><span class="lf" title="Line break">↩</span>                    &lt;td height="42" colspan="2"&gt;</b>&lt;img s</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-h1,-h2,-h3,-h4,-h5,-and-h6-elements">
+                        <code>h3</code>
+                      </a> not allowed as child of element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-span-element">
+                        <code>span</code>
+                      </a> in this context. (Suppressing further errors from this subtree.)</span>
+                  </p>
+                  <dl>
+                    <dt>Content model for element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-span-element">
+                        <code>span</code>
+                      </a>:</dt>
+                    <dd><a href="https://www.whatwg.org/specs/web-apps/current-work/#phrasing-content">Phrasing content</a>.</dd>
+
+                    <dd>Neither tag is omissible.</dd>
+                  </dl>
+                  <ol>
+                    <li value="88">
+                      <p class="location">From line
+                        <span class="first-line">276</span>, column
+                        <span class="first-col">17</span>; to line
+                        <span class="last-line">276</span>, column
+                        <span class="last-col">41</span>
+                      </p>
+                      <p class="extract">
+                        <code> <b>&lt;h3 class="big2" id="h4"&gt;</b>HISTOR</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Attribute
+                      <code>webkitallowfullscreen</code> not allowed on element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">
+                        <code>iframe</code>
+                      </a> at this point.</span>
+                  </p>
+                  <dl>
+                    <dt>Attributes for element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">
+                        <code>iframe</code>
+                      </a>:</dt>
+                    <dd><a href="https://www.whatwg.org/specs/web-apps/current-work/#global-attributes">Global attributes</a></dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-src">src</a></code> — Address of the resource</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-srcdoc">srcdoc</a></code> — A document to render in the
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">iframe</a></code>
+                    </dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-name">name</a></code> — Name of <a href="https://www.whatwg.org/specs/web-apps/current-work/#nested-browsing-context">nested browsing context</a></dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-sandbox">sandbox</a></code> — Security rules for nested content</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-seamless">seamless</a></code> — Whether to apply the document&#8217;s styles to the nested content</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-allowfullscreen">allowfullscreen</a></code> — Whether to allow the
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">iframe</a></code>&#8217;s contents to use
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#dom-element-requestfullscreen">requestFullscreen()</a></code>
+                    </dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-dim-width">width</a></code> — Horizontal dimension</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-dim-height">height</a></code> — Vertical dimension</dd>
+                  </dl>
+                  <ol>
+                    <li value="147">
+                      <p class="location">From line
+                        <span class="first-line">452</span>, column
+                        <span class="first-col">27</span>; to line
+                        <span class="last-line">452</span>, column
+                        <span class="last-col">177</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;iframe src="http://player.vimeo.com/video/52907397" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;</b>&lt;/ifra</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Attribute
+                      <code>mozallowfullscreen</code> not allowed on element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">
+                        <code>iframe</code>
+                      </a> at this point.</span>
+                  </p>
+                  <dl>
+                    <dt>Attributes for element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">
+                        <code>iframe</code>
+                      </a>:</dt>
+                    <dd><a href="https://www.whatwg.org/specs/web-apps/current-work/#global-attributes">Global attributes</a></dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-src">src</a></code> — Address of the resource</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-srcdoc">srcdoc</a></code> — A document to render in the
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">iframe</a></code>
+                    </dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-name">name</a></code> — Name of <a href="https://www.whatwg.org/specs/web-apps/current-work/#nested-browsing-context">nested browsing context</a></dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-sandbox">sandbox</a></code> — Security rules for nested content</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-seamless">seamless</a></code> — Whether to apply the document&#8217;s styles to the nested content</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-iframe-allowfullscreen">allowfullscreen</a></code> — Whether to allow the
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#the-iframe-element">iframe</a></code>&#8217;s contents to use
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#dom-element-requestfullscreen">requestFullscreen()</a></code>
+                    </dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-dim-width">width</a></code> — Horizontal dimension</dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-dim-height">height</a></code> — Vertical dimension</dd>
+                  </dl>
+                  <ol>
+                    <li value="148">
+                      <p class="location">From line
+                        <span class="first-line">452</span>, column
+                        <span class="first-col">27</span>; to line
+                        <span class="last-line">452</span>, column
+                        <span class="last-col">177</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;iframe src="http://player.vimeo.com/video/52907397" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;</b>&lt;/ifra</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>The
+                      <code>frameborder</code> attribute on the
+                      <code>iframe</code> element is obsolete. <a href="http://wiki.whatwg.org/wiki/Presentational_elements_and_attributes" title="About using CSS instead of presentational elements and attributes.">Use CSS instead</a>.</span>
+                  </p>
+                  <ol>
+                    <li value="149">
+                      <p class="location">From line
+                        <span class="first-line">452</span>, column
+                        <span class="first-col">27</span>; to line
+                        <span class="last-line">452</span>, column
+                        <span class="last-col">177</span>
+                      </p>
+                      <p class="extract">
+                        <code> &lt;td&gt;<b>&lt;iframe src="http://player.vimeo.com/video/52907397" width="500" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen&gt;</b>&lt;/ifra</code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+                <li>
+                  <p>
+                    <strong class="alert-danger">Error</strong>:
+                    <span>Attribute
+                      <code>height</code> not allowed on element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-table-element">
+                        <code>table</code>
+                      </a> at this point.</span>
+                  </p>
+                  <dl>
+                    <dt>Attributes for element
+                      <a href="https://www.whatwg.org/specs/web-apps/current-work/#the-table-element">
+                        <code>table</code>
+                      </a>:</dt>
+                    <dd><a href="https://www.whatwg.org/specs/web-apps/current-work/#global-attributes">Global attributes</a></dd>
+                    <dd>
+                      <code><a href="https://www.whatwg.org/specs/web-apps/current-work/#attr-table-sortable">sortable</a></code>
+                    </dd>
+                  </dl>
+                  <ol>
+                    <li value="191">
+                      <p class="location">From line
+                        <span class="first-line">727</span>, column
+                        <span class="first-col">37</span>; to line
+                        <span class="last-line">727</span>, column
+                        <span class="last-col">79</span>
+                      </p>
+                      <p class="extract">
+                        <code>ign="top"&gt;<b>&lt;table width="1001" height="22" border="0"&gt;</b>
+                          <span class="lf" title="Line break">↩</span>
+                        </code>
+                      </p>
+                    </li>
+                  </ol>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Issue Tracking</h2>
+        <div class="list-group">
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <p class="list-group-item-text">
+                Issue tracking and documentation shall be handled through the project&#8217;s Git repository. Any issues raised
+                will be evaluated and labled by the Project Manager according to their fit and feasibility within the
+                scope of the project.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="row">
+        <h2>Responsive Design Validation</h2>
+        <div class="list-group">
+          
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Desktop</h3>
+              
+              <p class="list-group-item-text">
+                <h4>Linux</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Desktop/Linux_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Desktop/Linux_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+              <p class="list-group-item-text">
+                <h4>Windows</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Desktop/Windows_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Desktop/Windows_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+            </div>
+          </div>
+          
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Tablet</h3>
+              
+              <p class="list-group-item-text">
+                <h4>Linux</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Tablet/Linux_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Tablet/Linux_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+              <p class="list-group-item-text">
+                <h4>Windows</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Tablet/Windows_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Tablet/Windows_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+            </div>
+          </div>
+          
+          <div class="list-group-item">
+            <div class="row-action-primary">
+              <i class="icon mdi-content-send"></i>
+            </div>
+            <div class="row-content">
+              <h3 class="list-group-item-heading">Mobile</h3>
+              
+              <p class="list-group-item-text">
+                <h4>Linux</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Mobile/Linux_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Mobile/Linux_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+              <p class="list-group-item-text">
+                <h4>Windows</h4>
+                  
+                  <h5>Chrome_40</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Mobile/Windows_Chrome_40/step-0.png" />
+                  
+                  <h5>Firefox_35</h5>
+                  <img class="img-responsive" src="downloads/code/testing/screenshots/Mobile/Windows_Firefox_35/step-0.png" />
+                  
+              </p>
+              
+            </div>
+          </div>
+          
+        </div>
+      </section>
+    </div>
+    <script src="javascripts/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="javascripts/bootstrap.min.js" type="text/javascript"></script>
+    <script src="javascripts/ripples.min.js" type="text/javascript"></script>
+    <script src="javascripts/material.min.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.toc-1.1.4.js" type="text/javascript"></script>
+    <script src="javascripts/jquery.md5.js" type="text/javascript"></script>
+    <script>
+      $(document).ready(function() {
+        $.material.ripples();
+        $.material.radio();
+        $.material.input();
+        $.material.checkbox();
+        $('#toc').toc({
+          autoId: true,
+          exclude: 'h6',
+          // numerate: false
+        });
+        $('#version-history').GithubCommitHistory({
+          username: "bstrdsmkr",
+          repo: "web2400",
+          branch: "gh-pages",
+          path: "ZachGuzman-proposal.html",
+          limit: 100,
+          offset: 0
+        });
+        $(".gantt").gantt({
+          source: "assets/specification_gantt.txt",
+          navigate: "scroll",
+          itemsPerPage: 99
+        });
+        $(window).on('resize', function() {
+          resizeIframe($("#resume"));
+        });
+      });
+    </script>
+  </body>
+
+</html>
