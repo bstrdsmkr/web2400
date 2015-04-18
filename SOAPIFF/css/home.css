@@ -1,0 +1,72 @@
+html {
+  background: url(../img/soapiff_bg_light.png) no-repeat center bottom fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+body {
+  font-family: montserrat, arial, verdana;
+  color: white;
+  background-color: transparent !important;
+}
+.navbar {
+  box-shadow: 0 3px 10px rgba(0,0,0,.23),0 3px 10px rgba(0,0,0,.16);
+  background-color: #333333;
+}
+.navbar-brand {
+  max-height: 100%;
+  max-width: 100%;
+}
+/*form styles*/
+section {
+  background: #002d56;
+  border: 0 none;
+  border-radius: 3px;
+  box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+  padding: 20px 30px;
+
+  box-sizing: border-box;
+  width: 80%;
+  margin: 50px auto;
+
+}
+
+/*headings*/
+h2 {
+  font-size: 15px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  color: #f7722d;
+}
+
+.icon-bar {
+  background-color: #f7722d !important;
+}
+.btn {
+  cursor: pointer;
+}
+.list-group {
+  text-align: left;
+}
+.btn.btn-fab {
+  margin-bottom:  23px;
+}
+#btn-drawer{
+  position: fixed;
+  right: 23px;
+  bottom: 0;
+  z-index: 100;
+}
+#new-btn {
+  display: block;
+  visibility: hidden;
+  transform: scale(0,0);
+  transition: all 0.075s;
+}
+#btn-drawer:hover > #new-btn {
+  visibility: visible;
+  transform:  scale(1, 1);
+  transition: all 0.075s;
+}
