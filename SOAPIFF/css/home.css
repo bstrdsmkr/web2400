@@ -70,3 +70,13 @@ h2 {
   transform:  scale(1, 1);
   transition: all 0.075s;
 }
+.bg-label {
+  color: #333333;
+}
+.film-name {
+  font-weight: bold;
+  font-size: 24px;
+}
+.artist-name:before {
+  content: " - "
+}
